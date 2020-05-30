@@ -1,0 +1,12 @@
+applications:
+- name: exstream-proxy-service
+  memory: 1G
+  instances: 1
+  host: exstream-proxy-service
+  path: target/exstream-proxy-service-0.0.1-SNAPSHOT.jar
+  env:
+    SPRING_APPLICATION_NAME: exstream-proxy-service
+    SPRING_PROFILES_ACTIVE: cloud 
+    JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}' 
+  services:
+  - eureka-service-registry

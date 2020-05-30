@@ -1,0 +1,12 @@
+applications:
+- name: empower-proxy-service
+  memory: 1G
+  instances: 1
+  host: empower-proxy-service
+  path: target/empower-0.0.1-SNAPSHOT.jar
+  env:
+    SPRING_APPLICATION_NAME: empower-proxy-service
+    SPRING_PROFILES_ACTIVE: cloud 
+    JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}' 
+  services:
+  - eureka-service-registry

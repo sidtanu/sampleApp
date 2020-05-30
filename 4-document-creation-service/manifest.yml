@@ -1,0 +1,13 @@
+applications:
+- name: document-creation-service
+  memory: 1G
+  instances: 1
+  host: document-creation-service
+  path: target/poc.documentcreationservice-0.0.1-SNAPSHOT.jar
+  env:
+    SPRING_APPLICATION_NAME: document-creation-service
+    SPRING_PROFILES_ACTIVE: cloud 
+    JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}'   
+  services:
+  - eureka-service-registry
+  - Gaig-POC-RabbitMQ-Service

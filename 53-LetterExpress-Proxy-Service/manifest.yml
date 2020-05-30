@@ -1,0 +1,10 @@
+applications:
+- name: letterexpress-proxy-service
+  memory: 1G
+  instances: 1
+  host: letterexpress-proxy-service
+  path: target/letterexpress-0.0.1-SNAPSHOT.jar
+  env:
+    spring.profiles.active: cloud  
+  services:
+  - eureka-service-registry
