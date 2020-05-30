@@ -1,0 +1,9 @@
+applications:
+- name: document-creation-gateway
+  memory: 1G
+  host: zuul-api-gateway
+  path: target/poc-0.0.1-SNAPSHOT.jar
+  env:
+    spring.profiles.active: cloud
+  services:
+  - eureka-service-registry  
