@@ -9,9 +9,11 @@ pipeline {
 
         stage ('test') {
             steps {
-                    sh 'echo "hello"'
-                   // sh './mvnw test'
-		    sh 'chmod -R 775 ./53-LetterExpress-Proxy-Service/mvnw'
+                    sh '''
+		    	echo "hello"
+			chmod -R 775 ./53-LetterExpress-Proxy-Service/mvnw
+                   	./mvnw test
+		    '''
             }
          }       
 
