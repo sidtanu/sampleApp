@@ -11,6 +11,7 @@ pipeline {
             steps {
                     sh 'echo "hello"'
                    // sh './mvnw test'
+		    sh 'chmod -R 775 ./53-LetterExpress-Proxy-Service/mvnw'
             }
          }       
 
