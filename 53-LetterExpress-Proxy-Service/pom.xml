@@ -100,8 +100,8 @@
 				<artifactId>spring-boot-starter-parent</artifactId>
 				<version>2.3.0.RELEASE</version>
 				<scope>import</scope>
-				<type>pom</type> 
- 			</dependency>
+				<type>pom</type>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -110,6 +110,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>3.1.2.RELEASE</version>
 			</plugin>
 		</plugins>
 	</build>
