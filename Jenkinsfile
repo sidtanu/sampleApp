@@ -22,7 +22,7 @@ pipeline {
          }
         stage ('sonar') {
             steps {
-		    archiveArtifacts artifacts: '**/*.jar', onlyIfSuccessful: true
+		    archiveArtifacts artifacts: '**/*.jar', excludes: 'maven-wrapper.jar', onlyIfSuccessful: true
             }
          }     
     }
