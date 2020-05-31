@@ -12,7 +12,7 @@ pipeline {
                     sh '''
 		    	echo "hello"
 			chmod -R 775 ./53-LetterExpress-Proxy-Service/mvnw
-                   	./mvnw test
+                   	./53-LetterExpress-Proxy-Service/mvnw test
 		    '''
             }
          }       
