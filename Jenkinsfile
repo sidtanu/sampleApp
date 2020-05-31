@@ -16,7 +16,7 @@ pipeline {
 
         stage ('package') {
             steps {
-                    sh './mvnw clean package'
+                    sh './53-LetterExpress-Proxy-Service/mvnw clean package'
             }
          }
         stage ('sonar') {
