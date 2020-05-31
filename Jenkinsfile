@@ -22,7 +22,7 @@ pipeline {
          }
         stage ('sonar') {
             steps {
-					sh 'echo "hello11"'
+		    archiveArtifacts artifacts: '**/*.jar', onlyIfSuccessful: true
             }
          }     
     }
